@@ -25,13 +25,20 @@ cd /d "%~dp0"
 php -r "copy('.env.example', '.env');"
 
 :: Install dependencies using Composer
-@REM call composer install
+call composer install
+
+call npm install --save-dev vite
+
+call php artisan storage:link
 
 :: Run database migrations and seed
-@REM call php artisan migrate:fresh --seed
+call php artisan migrate:fresh --seed
+
+:: seed
+call php artisan db:seed --class=DatabaseSeeder
 
 :: Generate application key
-@REM call php artisan key:generate
+call php artisan key:generate
 
 :: Open current directory in Visual Studio Code
 code .
