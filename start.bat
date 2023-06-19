@@ -32,7 +32,7 @@ call npm install --save-dev vite
 call php artisan storage:link
 
 :: Run database migrations and seed
-call php artisan migrate:fresh --seed
+call php artisan migrate
 
 :: seed
 call php artisan db:seed --class=DatabaseSeeder
