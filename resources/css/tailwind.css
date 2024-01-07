@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-none {
+  @apply hidden;
+}
+
+@layer components {
+  .label {
+    @apply block mb-1 text-gray-500 dark:text-gray-300 font-medium;
+  }
+
+  .input {
+    @apply block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md;
+  }
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600;
+  }
+  .btn-log {
+    @apply bg-indigo-600 hover:bg-indigo-500 text-gray-800 font-medium p-2 rounded-md dark:text-gray-300;
+  }
+  .tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+.input-error {
+  @apply w-full p-2 rounded-md  dark:text-red-600 text-red-500;
+}
+
+.map2 {
+  @apply w-full h-[500px] rounded-md mx-auto mt-2 mb-2 xl:w-3/4  sm:bg-gray-500;
+}
+
+.map {
+  @apply w-full z-0 h-96 lg:h-[500px] xl:mx-20 rounded-md mx-auto mt-2 mb-2 sm:bg-gray-500;
+}
+
+.btn-aside {
+  @apply flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-indigo-600 w-full;
+}
+
+.a-aside {
+  @apply flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-indigo-600;
+}
+
+.primary {
+  @apply bg-[#72795e];
+}
+
+.active {
+  @apply bg-gray-300 dark:bg-gray-700;
+}
+
+.fc-list-day-text,
+.fc-list-day-side-text {
+  @apply text-gray-600 dark:text-gray-800;
+}
+
+.fc .fc-list-event:hover td {
+  @apply cursor-pointer bg-gray-300 dark:bg-[#2c3e50];
+}
+
+.fc-timegrid-col-events {
+  @apply w-full;
+}
+.fc-timegrid-event {
+  @apply mr-[4px];
+}
+
+.fc-event .fc-event-draggable .fc-event-resizable .fc-event-start .fc-event-end .fc-event-future .fc-timegrid-event .fc-v-event {
+  @apply pr-1;
+}
+
+/* .fc-event-container > .fc-event-title .fc-sticky > .fc-event-description {
+
+  @apply line-clamp-2;
+} */
+
+.fc-event-title-container {
+  @apply whitespace-normal line-clamp-2;
+}
+
+.fc-daygrid-dot-event .fc-event-title {
+  @apply font-medium;
+}
